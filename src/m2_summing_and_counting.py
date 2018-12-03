@@ -32,7 +32,7 @@ def main():
 def run_test_sum_more_cosines():
     """ Tests the   sum_more_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  sum_more_cosines  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     #
@@ -67,7 +67,7 @@ def run_test_sum_more_cosines():
         print('       actual:  ', 0.13416)
 
     # -------------------------------------------------------------------------
-    # TODO: 2 (continued).
+    # DONE: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 # Test 2:
@@ -81,7 +81,7 @@ def run_test_sum_more_cosines():
 
 
 # Test 3:
-    expected =-0.51948  # This is APPROXIMATELY the correct answer.
+    expected = -0.51948  # This is APPROXIMATELY the correct answer.
     answer = sum_more_cosines(0, 4)
     print('Test 3 expected:', expected, '(approximately)')
     if answer is not None:
@@ -122,10 +122,11 @@ def sum_more_cosines(m, n):
         total = total + math.cos(k + m)
     return total
 
+
 def run_test_count_sines_from():
     """ Tests the   count_sines_from   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  count_sines_from  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -138,13 +139,25 @@ def run_test_count_sines_from():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected = 5
+    expected = 0.20444
     answer = count_sines_from(3, 9)
     print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
+    print('       actual:  ', round(answer, 5))
+
+    # Test 2:
+    expected = 0.17616
+    answer = count_sines_from(1, 5)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', round(answer, 5))
+
+    # Test 3:
+    expected = -0.94472
+    answer = count_sines_from(2, 6)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', round(answer, 5))
 
     # -------------------------------------------------------------------------
-    # TODO: 4 (continued).
+    # DONE: 4 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
 
@@ -176,6 +189,11 @@ def count_sines_from(m, n):
     #   you must NOT use the 2 or 3-parameter versions
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
+    import math
+    total = 0
+    for k in range(n + 1 - m):
+        total = total + math.sin(k + m)
+    return total
 
 
 def run_test_count_sines_vs_cosines():
