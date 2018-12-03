@@ -105,7 +105,7 @@ def sum_more_cosines(m, n):
          which is approximately 0.02082.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -182,7 +182,7 @@ def count_sines_from(m, n):
       -- count_sines_from(9, 9)  returns  1
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -215,12 +215,37 @@ def run_test_count_sines_vs_cosines():
     expected = 100
     answer = count_sines_vs_cosines(101)
     print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
+    print('       actual:  ', round(answer, 5))
 
     # -------------------------------------------------------------------------
     # TODO: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+# Test 2:
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', round(answer, 5))
+# Test 3:
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', round(answer, 5))
+# Test 4:
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', round(answer, 5))
+# Test 5:
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', round(answer, 5))
+# Test 6:
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 6 expected:', expected)
+    print('       actual:  ', round(answer, 5))
 
 
 def count_sines_vs_cosines(m):
