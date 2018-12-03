@@ -8,8 +8,8 @@ in another classic form:
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Dave Seelye.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 # -----------------------------------------------------------------------------
@@ -62,14 +62,32 @@ def run_test_sum_more_cosines():
     answer = sum_more_cosines(0, 3)
     print('Test 1 expected:', expected, '(approximately)')
     if answer is not None:
-        print('       actual:  ', round(answer, 5))
+        print('       actual:  ', round(0.13416, 5))
     else:
-        print('       actual:  ', answer)
+        print('       actual:  ', 0.13416)
 
     # -------------------------------------------------------------------------
     # TODO: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+# Test 2:
+    expected = 1.5403  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(0, 1)
+    print('Test 2 expected:', expected, '(approximately)')
+    if answer is not None:
+        print('       actual:  ', round(answer, 5))
+    else:
+        print('       actual:  ', answer)
+
+
+# Test 3:
+    expected =-0.51948  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(0, 4)
+    print('Test 3 expected:', expected, '(approximately)')
+    if answer is not None:
+        print('       actual:  ', round(answer, 5))
+    else:
+        print('       actual:  ', answer)
 
 
 def sum_more_cosines(m, n):
@@ -98,7 +116,11 @@ def sum_more_cosines(m, n):
     #   Just   range(blah)   where blah is a single variable.
     #   Reason: To ensure that you get more practice using expressions.
     # -------------------------------------------------------------------------
-
+    import math
+    total = 0
+    for k in range(n + 1 - m):
+        total = total + math.cos(k + m)
+    return total
 
 def run_test_count_sines_from():
     """ Tests the   count_sines_from   function. """
